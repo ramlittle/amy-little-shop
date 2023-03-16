@@ -1,11 +1,13 @@
+import DataSet from '../data/links.json';
+
 const initialState={
-    emergencies:[]
+    links:DataSet
 };
 
 const reducer =(state=initialState, action)=>{
    switch(action.type){
-    case 'POPULATE_EMERGENCIES':
-        return {...state,emergencies:action.payload.emergencies}
+    case 'POPULATE_LINKS':
+        return {...state,links:action.payload.links}
     default:
         return state;
    }
