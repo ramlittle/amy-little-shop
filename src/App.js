@@ -1,16 +1,17 @@
 //DEPENDENCIES
 import {Routes,Route} from 'react-router';
 //COMPONENTS
-import Heder from './components/Header.js';
+import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-import Links from './components/Links.js';
+import Products from './components/Products.js';
 //CSS
-import './css/General.css';
+import './css/Styles.css';
 const App =()=>{
   return(
     <>
+      <Header/>
       <Routes>
-        <Route path='/'element={<Links/>}/>
+        <Route path='/'element={<Products/>}/>
       </Routes>
       <Footer/>
     </>

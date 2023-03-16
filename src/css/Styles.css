@@ -1,0 +1,145 @@
+/* GENERAL */
+*{
+    margin:0;
+    padding:0;
+}
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    display:flex;
+    background-color: dodgerblue;
+    top:0;
+    position:sticky;
+    z-index:1;
+}
+
+.img-container{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:2%;
+    padding:5px;
+}
+.title{
+    display:flex;
+    width: 38%;
+    justify-content: start;
+    align-items: center;
+    padding:5px;
+}
+.title h1{
+    color: white;  
+    text-shadow:1px 1px grey;
+    font-size: large;
+}
+.search{
+    width:30%;
+}
+.others{
+    width:30%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+}
+.others h6{
+    color:white;
+}
+.others img{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+}
+.others img:hover{
+    background-color:white;
+}
+
+/* BODY */
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+    border:1px solid grey;
+    margin:5px;
+    border-radius:5px;
+}
+.card:hover{
+    border:1px solid black;
+    opacity: 95%;
+}
+.card img{
+    width:300px;
+    border-radius:5px;
+}
+.card a{
+    color: white;
+    background-color:dodgerblue;
+    padding:5px;
+    text-decoration:none;
+    border-radius:5px;
+}
+.card a:hover{
+    color: grey;
+    background-color:goldenrod;
+}
+/* categories */
+.category label,
+.category span{
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    font-size: small;
+}
+    .instruments{
+        background-color: burlywood;
+    }
+    .electronics{
+        background-color: brown;
+    }
+    .therapy{
+        background-color: green;
+    }
+/* FOOTER */
+footer{
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+}
+footer p{
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+footer a{
+    color: gold;
+    text-decoration:none;
+    padding-right:5px;
+    padding-left:5px;
+}
+footer a:hover{
+    color: white;
+}
+footer img{
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    padding:5px;
+}
+p img:hover{
+    background-color:white;
+}

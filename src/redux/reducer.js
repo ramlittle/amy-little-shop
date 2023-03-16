@@ -1,13 +1,13 @@
-import DataSet from '../data/links.json';
+import DataSet from '../data/products.json';
 
 const initialState={
-    links:DataSet
+    products:DataSet
 };
 
 const reducer =(state=initialState, action)=>{
    switch(action.type){
-    case 'POPULATE_LINKS':
-        return {...state,links:action.payload.links}
+    case 'POPULATE_PRODUCTS':
+        return {...state,products:action.payload.products}
     default:
         return state;
    }
