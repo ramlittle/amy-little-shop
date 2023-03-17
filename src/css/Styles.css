@@ -27,7 +27,7 @@ header{
 }
 .title{
     display:flex;
-    width: 38%;
+    width: 28%;
     justify-content: start;
     align-items: center;
     padding:5px;
@@ -38,7 +38,13 @@ header{
     font-size: large;
 }
 .search{
-    width:30%;
+    width:40%;
+    display:flex;
+    padding:5px;
+}
+.search input{
+    width:100%;
+    padding:5px;
 }
 .others{
     width:30%;
@@ -73,6 +79,7 @@ header{
     border:1px solid grey;
     margin:5px;
     border-radius:5px;
+    width: calc(100%/4);
 }
 .card:hover{
     border:1px solid black;
@@ -92,6 +99,10 @@ header{
 .card a:hover{
     color: grey;
     background-color:goldenrod;
+}
+.card h2{
+    font-size: small;
+    text-align:center;
 }
 /* categories */
 .category label,

@@ -1,4 +1,5 @@
-const Header =()=>{
+import Search from './Search.js';
+const Header =(props)=>{
     const siteLogo='https://i.ibb.co/xJtZ4DH/Yellow-and-Black-Online-Shop-Business-Logo-removebg-preview.png'
     return(
         <header>
@@ -11,7 +12,7 @@ const Header =()=>{
                 <h1>Amy Little Shop</h1>
             </div>
             <div className='search'>
-
+                <Search searchFunction={props.searchFunction}/>
             </div>
             <div className='others'>
                     <h6>Follow us on </h6>

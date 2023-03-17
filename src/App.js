@@ -9,7 +9,6 @@ import './css/Styles.css';
 const App =()=>{
   return(
     <>
-      <Header/>
       <Routes>
         <Route path='/'element={<Products/>}/>
       </Routes>
