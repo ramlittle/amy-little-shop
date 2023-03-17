@@ -27,7 +27,7 @@ header{
 }
 .title{
     display:flex;
-    width: 28%;
+    width: 18%;
     justify-content: start;
     align-items: center;
     padding:5px;
@@ -38,7 +38,7 @@ header{
     font-size: large;
 }
 .search{
-    width:40%;
+    width:50%;
     display:flex;
     padding:5px;
 }

@@ -6,6 +6,7 @@ import Footer from './components/Footer.js';
 import Products from './components/Products.js';
 //CSS
 import './css/Styles.css';
+import './css/Media.css';
 const App =()=>{
   return(
     <>
