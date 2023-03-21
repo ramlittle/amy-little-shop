@@ -1,36 +1,50 @@
-import React, { useState } from "react";
-import Papa from "papaparse";
+import {useSelector} from 'react-redux';
+import {useState,useEffect} from 'react';
+import Header from './Header.js';
+const MovieData =()=>{
+    const products=useSelector(state=>state.products);
+    const [searchResult,setSearchResult]=useState([]);
+    const [items,setItems]=useState(products);
+    console.log('dito Products',products)
 
-const MovieData = () => {
-  const [data, setData] = useState({});
-  Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRoT9A54AREkJ2CHgpSlFez8mm8H8_VSVzcWO61ZeAdH63VAbKYVB8yD1E2CbWwRhZZ10L5gTa6iR1X/pub?gid=148953084&single=true&output=csv", {
-    download: true,
-    header: true,
-    complete: (results) => {
-      setData(results.data);
-    },
-  });
-  const movies = Array.from(data);
-  const [searchResult,setSearchResult]=useState([]);
-  
-  return (
-    <section className='products'>
-    {movies.map((data)=>(
-        <div className='card' key={data.description}>
-            <img src={data.sample_img_url}/>
-            <h2>{data.description.toUpperCase()}</h2>
-            <a target = '_blank'
-                href={data.affiliate_link}>View</a>
-            <div className='category'>
-                <label>Category: </label>
-                <span className={data.category}>
-                    {data.category}
-                </span>
-            </div>
-        </div>
-    ))}
-</section>
+    function searchFunction(enteredProduct){
+        const searchedProduct=
+        products.filter((item)=>{
+            return item.description.toLowerCase().includes(enteredProduct);
+        })
+        console.log('dito ang search results',searchedProduct)
+        setSearchResult(searchedProduct);
+        return searchedProduct;
+    }       
+    console.log('ito namna ang searched results from products',searchResult);
 
-  );
-};
+    //Check if user entered in search
+    useEffect(()=>{
+        if (searchResult.length>0){
+            setItems(searchResult);
+        }
+    //will run on first render, also will run on state changes
+    },[searchResult]);
+    return (
+        <>
+        <Header searchFunction={searchFunction}/>
+        <section className='products'>
+            {items.map((item)=>(
+                <div className='card'>
+                    <img src={item.sample_img_url}/>
+                    <h2>{item.description.toUpperCase()}</h2>
+                    <a target = '_blank'
+                        href={item.affiliate_link}>View</a>
+                    <div className='category'>
+                        <label>Category: </label>
+                        <span className={item.category}>
+                            {item.category}
+                        </span>
+                    </div>
+                </div>
+            ))}
+        </section>
+        </>
+    )
+}
 export default MovieData;

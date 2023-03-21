@@ -7,8 +7,6 @@ const Search=(props)=>{
     const onSearchHandler=(e)=>{
         setEnteredProduct(e.target.value.toLowerCase());
         setSearchResult(props.searchFunction(enteredProduct));
-
-       
     }
 
     useEffect(()=>{
