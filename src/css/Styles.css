@@ -158,3 +158,9 @@ footer img{
 p img:hover{
     background-color:white;
 }
+.visitCounter img{
+    width:75px;
+    height:10px;
+    border-radius:5px;
+    font-size:small;
+}
