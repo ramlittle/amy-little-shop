@@ -20,6 +20,10 @@ const Header =(props)=>{
                         href='https://www.facebook.com/ramdom.access.memory'>
                         <img src='https://cdn-icons-png.flaticon.com/512/124/124010.png'/>
                     </a>
+                    <a target='_blank'
+                    href='https://www.youtube.com/channel/UCHAtmGDTDFT6fDlrF0Hd8yA'>
+                        <img src='https://p7.hiclipart.com/preview/208/269/277/youtube-play-button-computer-icons-clip-art-youtube.jpg'/>
+                    </a>
             </div>
         </header>
     )
