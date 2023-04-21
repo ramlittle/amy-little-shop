@@ -22,7 +22,7 @@ const Header =(props)=>{
                     </a>
                     <a target='_blank'
                     href='https://www.youtube.com/channel/UCHAtmGDTDFT6fDlrF0Hd8yA'>
-                        <img src='https://p7.hiclipart.com/preview/208/269/277/youtube-play-button-computer-icons-clip-art-youtube.jpg'/>
+                        <img src='https://www.state.gov/wp-content/uploads/2020/07/72-729738_youtube-red-circle-circle-youtube-logo-png-clipart.jpg'/>
                     </a>
             </div>
         </header>
